@@ -34,7 +34,19 @@ These models are built using dbt and served from BigQuery into Looker Studio for
 
 Architecture Diagram
 
+```mermaid
+flowchart TD
+    GCS[Source: GCS Bucket] --> BQRaw[BigQuery - Raw Tables]
+    BQRaw --> dbt[Transform with dbt Models]
+    dbt --> BQModels[BigQuery - Clean Models]
+    BQModels --> Looker[Looker Studio Dashboard]
 
+    style GCS fill:#3E4C59,stroke:#2C3E50,stroke-width:1px,color:#F0F4F8
+    style BQRaw fill:#475569,stroke:#334155,stroke-width:1px,color:#E2E8F0
+    style dbt fill:#2563EB,stroke:#1E40AF,stroke-width:1px,color:#FFFFFF
+    style BQModels fill:#059669,stroke:#047857,stroke-width:1px,color:#ECFDF5
+    style Looker fill:#9333EA,stroke:#6B21A8,stroke-width:1px,color:#F3E8FF
+```
 
 1. GCS stores raw source files  
 2. BigQuery ingests raw tables  
