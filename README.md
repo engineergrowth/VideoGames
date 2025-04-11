@@ -48,11 +48,6 @@ flowchart TD
     style Looker fill:#9333EA,stroke:#6B21A8,stroke-width:1px,color:#F3E8FF
 ```
 
-1. GCS stores raw source files  
-2. BigQuery ingests raw tables  
-3. dbt transforms raw tables into clean models  
-4. Looker Studio connects to BigQuery for visualization
-
 ---
 
 ## Pipeline Workflow
