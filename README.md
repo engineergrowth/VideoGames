@@ -85,8 +85,8 @@ This dashboard highlights key behavioral patterns and platform differences.
 
 Fork the repo and clone it locally:
 
-git clone https://github.com/your-username/video-game-pipeline  
-cd video-game-pipeline
+git clone https://github.com/your-username/VideoGames  
+cd VideoGames
 
 ### 2. Configure Your Environment
 
