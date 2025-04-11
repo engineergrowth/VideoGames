@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: vg_raw
+    database: videogames-456403
+    schema: vg_raw
+    tables:
+      - name: ps_purchased_games_raw
+      - name: xbox_purchased_games_raw
+      - name: xbox_games_raw
+      - name: ps_games_raw
+      - name: ps_achievements_raw
+      - name: xbox_achievements_raw
+
+models:
+  - name: avg_library_size_by_platform
+    description: "Average number of games owned per user on each platform (Xbox, PlayStation)"
+    columns:
+      - name: platform
+        description: "The platform name (Xbox or PlayStation)"
+      - name: avg_library_size
+        description: "The average number of games owned per user for the platform"
+
+  - name: top_genres_by_platform
+    description: "Counts of how many games exist in each genre, per platform, to show content variety or focus."
+    columns:
+      - name: platform
+        description: "The platform name (Xbox or PlayStation)"
+      - name: genre
+        description: "The genre category of the game"
+      - name: game_count
+        description: "The total number of games in the genre on the platform"
+
+  - name: top_achievement_games
+    description: "Top 10 games with the most achievements, joined with their title, genre, and platform."
+    columns:
+      - name: platform
+        description: "The platform name (Xbox or PlayStation)"
+      - name: title
+        description: "The title of the game"
+      - name: total_achievements
+        description: "The number of achievements available in the game"
+      - name: genres
+        description: "List of genres for the game"
+
+  - name: most_purchased_games
+    description: "Most commonly purchased games across both platforms, based on how often they appear in user libraries."
+    columns:
+      - name: title
+        description: "The name of the game"
+      - name: game_id
+        description: "The unique game ID"
+      - name: purchase_count
+        description: "Number of users who own the game across both platforms"
+
