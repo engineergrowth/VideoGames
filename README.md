@@ -7,7 +7,7 @@ This project showcases a modern data pipeline that processes Xbox and PlayStatio
 **Key Features**:
 - **Data Integration:** Combines Xbox and PlayStation data across games, purchases, achievements, and pricing.
 - **Cloud-Native Processing:** Uses Google Cloud Storage (GCS) and BigQuery to manage and analyze the data at scale.
-- **SQL Transformations:** Applies modular data models using dbt for clean, reusable transformations.
+- **SQL Transformations:** Applies data models using dbt for transformations.
 - **Visualization:** A Looker Studio dashboard enables platform comparisons and insights into player behavior.
 
 ---
